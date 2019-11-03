@@ -2,5 +2,5 @@
     <string name="app_name">Login_Lab1</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world_from_anique">Hello World from Anique!</string>
-
+    <string name="hide_password">\uf070</string>
 </resources>

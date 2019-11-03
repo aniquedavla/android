@@ -1,4 +1,4 @@
-package  com.aniquedavla.login.ui.login;
+package com.aniquedavla.login.ui.login;
 
 import androidx.annotation.Nullable;
 

@@ -1,4 +1,4 @@
-package  com.aniquedavla.login.ui.login;
+package com.aniquedavla.login.ui.login;
 
 /**
  * Class exposing authenticated user details to the UI.
