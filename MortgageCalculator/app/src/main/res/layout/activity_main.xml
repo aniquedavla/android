@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="117dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="#03A9F4"
+        android:shadowColor="#007E7C7C"
+        android:text="Reset"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.304" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="303dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="40dp"
+        android:text="Mortgage Calculator"
+        android:textColor="#03A9F4"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/homeValueInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.365" />
+
+    <EditText
+        android:id="@+id/homeValueInput"
+        android:layout_width="169dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="Home Value ($)"
+        android:inputType="number"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/interestRateInput"
+        android:layout_width="172dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Interest Rate (%)"
+        android:inputType="number"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/downPaymentInput" />
+
+    <EditText
+        android:id="@+id/propertyTaxRateInput"
+        android:layout_width="173dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Property tax rate (%)"
+        android:inputType="number"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/termsLabel" />
+
+    <EditText
+        android:id="@+id/downPaymentInput"
+        android:layout_width="169dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Down Payment ($)"
+        android:inputType="number"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeValueInput" />
+
+    <Button
+        android:id="@+id/calculateBtn"
+        android:layout_width="117dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="18dp"
+        android:background="#03A9F4"
+        android:shadowColor="#007E7C7C"
+        android:text="Calculate"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/propertyTaxRateInput" />
+
+    <Spinner
+        android:id="@+id/termsInput"
+        android:layout_width="89dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interestRateInput" />
+
+    <TextView
+        android:id="@+id/termsLabel"
+        android:layout_width="81dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="Terms (years)"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interestRateInput" />
+
+    <TextView
+        android:id="@+id/termsLabel2"
+        android:layout_width="101dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:text="Payment"
+        android:textColor="#00B8D4"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculateBtn" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="390dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/termsLabel2">
+
+        <TextView
+            android:id="@+id/monthlyPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Monthly Payment:"
+            android:textColor="#00B8D4"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/totalInterestPaid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total interest paid:"
+            android:textColor="#00B8D4"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/totalPropertyTax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total property tax paid:"
+            android:textColor="#00B8D4"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/payOffDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay off date:"
+            android:textColor="#00B8D4"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
